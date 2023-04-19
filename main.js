@@ -284,7 +284,7 @@ return cardsOnDom(typeArray);
 const showCatsButton = document.querySelector("#cat-btn");
 const showDogsButton = document.querySelector("#dog-btn");
 const showDinosButton = document.querySelector("#dino-btn");
-const showAllPetsButton = document.querySelector("#all-pet-btn");
+const showAllPetsButton = document.querySelector("#all-pets-btn");
 
 //add pets button, target it, and add click event
 showAllPetsButton.addEventListener('click', () => {
