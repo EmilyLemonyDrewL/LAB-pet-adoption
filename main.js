@@ -242,14 +242,14 @@ const pets = [
   ];
 
 
-  const renderToDom = (divID, htmlToRender) => {
+  const renderToDom = (divId, htmlToRender) => {
     const selectedDiv = document.querySelector(divId);
     selectedDiv.innerHTML = htmlToRender;
   }
 
-  const cardsOnDom = (array) => {
+  const cardsOnDom = (pets) => {
     let domString ="";
-    for (const pet of array) {
+    for (const pet of pets) {
       domString += `<div class="card" style="width: 18rem;">
     <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}/>
     <div class="card-body">
@@ -266,13 +266,13 @@ const pets = [
   }
 
 //function to filter pets for specific type
-const filter = (array, typeString) => {
+const filter = (pets, typeString) => {
   const typeArray = [];
 
 
-for (const pet of array) {
+for (const pet of pets) {
   if (pet.type === typeString) {
-    typeArray.push(member);
+    typeArray.push(pet);
   }
 }
 
