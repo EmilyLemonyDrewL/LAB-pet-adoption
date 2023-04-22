@@ -254,10 +254,11 @@ const pets = [
     <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}/>
     <div class="card-body">
       <h5 class="card-title">${pet.name}</h5>
-      <p>Type: ${pet.type}</p>
+      <p>Color: ${pet.color}</p>
       <p class="card-text">${pet.specialSkill}</p>
       <p>Type: ${pet.type}</p>
-      <p>Color: ${pet.color}</p>
+      <button class="btn btn-success" id="delete--${pet.id}">Delete Pet</button>
+       
     </div>
   </div>`;
     }
@@ -307,3 +308,54 @@ showDinosButton.addEventListener('click', () => {
   const petDinos = filter(pets, "dino");
   cardsOnDom(petDinos);
 });
+
+
+
+//form function below
+
+const form = document.querySelector('form');
+
+const createPet = (e) => {
+  e.preventDefault();
+
+  const newPetObj = {
+    id: pets.length + 1,
+    name: document.querySelector("#name").value,
+    color: document.querySelector("#color").value,
+    specialSkill: document.querySelector("#specialSkill").value,
+    type: document.querySelector("#type").value,    
+    imageUrl: document.querySelector("#image").value
+  }
+
+  pets.push(newPetObj);
+  cardsOnDom(pets);
+  form.reset();
+}
+
+form.addEventListener('submit', createPet);
+
+
+//add delete button
+
+//target your div that has the id of app
+const app = document.querySelector("#app");
+
+//add an event listener that "listens" for clicks
+app.addEventListener('click', (e) => {
+
+  //the includes method compares a searchElement to elements of an array. Make sure that e.target.id includes "delete"
+  if (e.target.id.includes("delete")) {
+    // deconstruct, baby!
+    const [, id] = e.target.id.split("--");
+
+
+    //According to google, .findIndex is an array method that returns the index of a first element in an array that satifies the provided testing function. -1 is returned if no elements satisfy the testing function.
+    const index = pets.findIndex(e => e.id === Number(id));
+
+    //the .splice mathod will modify the original array
+    pets.splice(index, 1);
+
+    cardsOnDom(pets);
+  }
+
+})
