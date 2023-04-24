@@ -11,6 +11,70 @@
 <body>
 
 
+  <a href="#myModal" class="btn btn-dark" data-bs-toggle="modal">Add New Pet Form</a>
+
+
+  <div  id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <form>
+
+           <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Name" required>
+            <label for="floatingInput">Name</label>
+           </div>
+
+           <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="color" placeholder="Color" required>
+            <label for="floatingInput">Color</label>
+           </div>
+
+           <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="specialSkill" placeholder="Special skills" required>
+            <label for="floatingInput">Special Skill(s)</label>
+           </div>
+
+           <div class="form-check">
+            <input class="form-check-input" type="radio" name="type" id="typeCat" value="cat">
+            <label class="form-check-label" for="flexRadioDefault1">
+              cat
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="type" id="typeDog" value="dog">
+            <label class="form-check-label" for="flexRadioDefault2">
+              dog
+            </label>
+          </div>
+      
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="type" id="typeDino" value="dino">
+            <label class="form-check-label" for="flexRadioDefault3">
+              dino
+            </label>
+          </div>
+
+
+          <div class="form-floating mb-3">
+           <input type="text" class="form-control" id="image" placeholder="image" required>
+           <label for="floatingInput">Image</label>
+          </div>
+
+          <button type="submit" class="btn btn-dark" id="form-submit">Add Pet</button>
+
+        </form>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <button class="btn btn-info" id="all-pets-btn">All pets</button>
   <button class="btn btn-primary" id="cat-btn">Cats</button>
   <button class="btn btn-warning" id="dog-btn">Dogs</button>
@@ -18,41 +82,8 @@
 
   <p>Click the buttons to view the available animals.</p>
 
-  <form>
-
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="name" placeholder="Name" required>
-      <label for="floatingInput">Name</label>
-    </div>
-
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="color" placeholder="Color" required>
-      <label for="floatingInput">Color</label>
-    </div>
-
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="specialSkill" placeholder="Special skills" required>
-      <label for="floatingInput">Special Skill(s)</label>
-    </div>
-
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="type" placeholder="type" required>
-      <label for="floatingInput">Type</label>
-    </div>
-
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="image" placeholder="image" required>
-      <label for="floatingInput">Image</label>
-    </div>
-
-    <button type="submit" class="btn btn-dark" id="form-submit">Add Pet</button>
-
-  </form>
-
-
-
-    <div id="app">Fill out the form to add a new pet.</div>
   
+  <div id="app"></div>
   
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
