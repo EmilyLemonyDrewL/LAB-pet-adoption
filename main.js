@@ -323,7 +323,7 @@ const createPet = (e) => {
     name: document.querySelector("#name").value,
     color: document.querySelector("#color").value,
     specialSkill: document.querySelector("#specialSkill").value,
-    type: document.querySelector("#type").value,    
+    type: document.querySelector("#typeCat, #typeDog, #typeDino").value,    
     imageUrl: document.querySelector("#image").value
   }
 
@@ -352,10 +352,14 @@ app.addEventListener('click', (e) => {
     //According to google, .findIndex is an array method that returns the index of a first element in an array that satifies the provided testing function. -1 is returned if no elements satisfy the testing function.
     const index = pets.findIndex(e => e.id === Number(id));
 
-    //the .splice mathod will modify the original array
     pets.splice(index, 1);
 
     cardsOnDom(pets);
   }
 
+
 })
+
+document.querySelector('input[name="petType"]):checked')
+
+document.querySelector('input[name="petType"]):checked').value
