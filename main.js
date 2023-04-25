@@ -359,7 +359,3 @@ app.addEventListener('click', (e) => {
 
 
 })
-
-//document.querySelector('input[name="type"]):checked')
-
-//document.querySelector('input[name="type"]):checked').value
