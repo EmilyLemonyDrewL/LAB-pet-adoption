@@ -36,29 +36,35 @@
             <input type="text" class="form-control" id="specialSkill" placeholder="Special skills" required>
             <label for="floatingInput">Special Skill(s)</label>
            </div>
-
-           <div class="form-check">
-            <input class="form-check-input" type="radio" name="type" id="typeCat" value="cat">
-            <label class="form-check-label" for="flexRadioDefault1">
+           
+          <div id="petType">
+            
+            <div class="form-check-inline" id="radioType">
+            <input class="form-check-input" type="radio" name="pet-type" id="cat-radio" value="cat">
+            <label class="form-check-label" for="radioTypeCat">
               cat
             </label>
-          </div>
+            </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="type" id="typeDog" value="dog">
-            <label class="form-check-label" for="flexRadioDefault2">
+             <div class="form-check-inline">
+             <input class="form-check-input" type="radio" name="pet-type" id="dog-radio" value="dog">
+             <label class="form-check-label" for="radioTypeDog">
               dog
-            </label>
-          </div>
+             </label>
+             </div>
       
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="type" id="typeDino" value="dino">
-            <label class="form-check-label" for="flexRadioDefault3">
+             <div class="form-check-inline">
+             <input class="form-check-input" type="radio" name="pet-type" id="dino-radio" value="dino">
+             <label class="form-check-label" for="radioTypeDino">
               dino
-            </label>
+             </label>
+             </div>
+
+
           </div>
+            
 
-
+           
           <div class="form-floating mb-3">
            <input type="text" class="form-control" id="image" placeholder="image" required>
            <label for="floatingInput">Image</label>

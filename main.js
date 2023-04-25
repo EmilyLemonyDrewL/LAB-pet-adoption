@@ -323,14 +323,14 @@ const createPet = (e) => {
     name: document.querySelector("#name").value,
     color: document.querySelector("#color").value,
     specialSkill: document.querySelector("#specialSkill").value,
-    type: document.querySelector("#typeCat, #typeDog, #typeDino").value,    
+    type: document.querySelector('input[name="pet-type"]:checked').value,
     imageUrl: document.querySelector("#image").value
   }
 
   pets.push(newPetObj);
   cardsOnDom(pets);
   form.reset();
-}
+};
 
 form.addEventListener('submit', createPet);
 
@@ -360,6 +360,6 @@ app.addEventListener('click', (e) => {
 
 })
 
-document.querySelector('input[name="petType"]):checked')
+//document.querySelector('input[name="type"]):checked')
 
-document.querySelector('input[name="petType"]):checked').value
+//document.querySelector('input[name="type"]):checked').value
