@@ -357,5 +357,4 @@ app.addEventListener('click', (e) => {
     cardsOnDom(pets);
   }
 
-
 })
