@@ -324,7 +324,6 @@ const createPet = (e) => {
     color: document.querySelector("#color").value,
     specialSkill: document.querySelector("#specialSkill").value,
     type: document.querySelector('input[name="pet-type"]:checked').value,
-    
     imageUrl: document.querySelector("#image").value
   }
 
